@@ -1,7 +1,7 @@
 def caesar_cipher(str, counter)
   array = str.split("")
   array.map! {|digit| count(digit.ord, counter).chr}
-  return p array.join("")
+  return array.join("")
 end
 
 def count(item, counter)
@@ -31,4 +31,6 @@ def count(item, counter)
   end
 end
 
-caesar_cipher("What is up!", -26)
+p caesar_cipher("What is up!", -26)
+p caesar_cipher("What is up!", 6)
+p caesar_cipher("What is up!", -255)
