@@ -1,4 +1,6 @@
 def caesar_cipher(str, counter)
+  return nil unless str.instance_of?(String)
+  return nil unless counter.instance_of?(Integer)
   array = str.split("")
   array.map! {|digit| count(digit.ord, counter).chr}
   return array.join("")
